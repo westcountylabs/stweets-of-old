@@ -1,11 +1,11 @@
 # s'Tweets of Old
 
-## Created by Steve Trush (steve@westcountylabs.com)
+## Created by Steve Trush (steve [at] westcountylabs.com)
 
 This is a short python script that lets you perform a mass removal of tweets from your Twitter account.
 When a regular expression finds a match in your past Tweets text -or- when a specific Tweet ID matches any status that you want to save, the script will skip over that tweet and not delete it!  
 
-Running this requires you to have a Twitter app registered through the Twitter Developer platform (https://developer.twitter.com/) -or- a temporary key requested from info@westcountylabs.com.
+Running this requires you to have a Twitter app registered through the Twitter Developer platform (https://developer.twitter.com/) -or- a temporary key requested from info [at] westcountylabs.com.
 
 Step 1. Request your data archive from Twitter: https://help.twitter.com/en/managing-your-account/how-to-download-your-twitter-archive This can take a day. Any tweets that you create after you receive this archive will not be deleted!
 
