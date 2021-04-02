@@ -1,0 +1,19 @@
+{
+	"precious_terms" : [
+		"Mulligan",
+		"testing",
+		"automat[a-z]*.license.plate.reader",
+		"test[a-z]*",
+		"Secure.*Justice"
+	],
+	"precious_tweets" : [
+    	1351637062991052800,
+    	1356677234782691329,
+		1376376725542633473,
+		1375321288395251715
+	],
+	"twitter_creds": {
+		"CONSUMER_KEY" :    "",
+		"CONSUMER_SECRET" : ""
+	}
+}
