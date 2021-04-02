@@ -1,28 +1,35 @@
-# Agenda Tracker
+# s'Tweets of Old
 
-The results are right here: https://twitter.com/baysurveillance
-
-A Twitter bot that looks through city agenda PDFs for developer-defined regular expressions.
+A python program that you use to looks through city agenda PDFs for developer-defined regular expressions.
 When the bot finds a match, it tweets a match with the date, matching terms, and a link to the file.
 
-## TODO:
-1. **_THIS README_** - here's the basic process, but I will describe everything more in detail. The one thing I learned is that each city is a little bit different, even tho Legistar helps to standardize some things.
-2. Separating out the files and dates is a little klugey right now. I could make better decisions for parsing out dates.
-3. The code needs more robust error checking and checking of inputs.
-4. Modularize and document the main parsing functions.
+Running this requires you to have a Twitter app registered through the Twitter Developer platform (https://developer.twitter.com/) -or- a temporary key requested from info@westcountylabs.com.
+
+Step 1. Request your data archive from Twitter: https://help.twitter.com/en/managing-your-account/how-to-download-your-twitter-archive This can take a day. Any tweets that you create after you receive this archive will not be deleted!
+
+Step 2. Copy delete\_tweets.py, config.json, and a copy of "tweet.js" from your archive renamed as "old\_tweets.json" into the same folder.
+
+Step 3. If you do not have Python3 installed, install Python3: https://www.python.org/downloads/
+
+Step 4. If you do not have Tweepy (a python library for interacting with Twitter's API) installed, install Tweepy: https://docs.tweepy.org/en/latest/install.html You may need to install pip first: https://pip.pypa.io/en/stable/installing/
+
+Step 5. Open config.json:
+	
+	5a. Replace the "precious\_terms" with the regular expressions of your choice. Letter case does not matter (I'm trying to save people from making mistakes and deleting too much). Also, consider including TwitterIDs for your favorite people that you mention in your tweets. 
+	
+	5b. Replace the "precious\_tweets" with the status id of any tweets that you want to save.
+	
+	5c. Copy and paste your "CONSUMER\_KEY" and "CONSUMER\_SECRET" from your Twitter Developer application information  
+
+Step 6. Replace the first line "old_tweets.json" with: ``` { "tweets" : [ { ``` 
+and add ```}``` as the last line of the final.
+
+Step 7. Test run the python script in a terminal. Open the activation link in the account for tweet deletion. Copy the verification code back into the console. 
+
+Step 8. Enter "TEST" to see the matches to your regular expression. If you don't see the matches you desire, correct your regular expressions in the config.json file.
+
+Step 9. When ready to delete, repeat Step 7 and enter "DELETE" for tweet removal. Why do you have to repeat Step 7? I really want people to be thoughtful before they remove their tweets for good!
 
 
-Step 1. Register a twitter account and create a new app. 
 
-Step 2. Find your city's Legistar or other site.
-        Copy the details of the site into the config.json file.
 
-Step 3. Update the search term regular expressions for your desire terms. Each term will be concatenated by the OR operator and will only find matches for your terms preceded by white space ('\b') - ie. the beginning of a word/phrase so "alpr" does not match with "malpractice".  
-
-Step 4. Test run the python script in an environment with Python 3 and the required libraries (see import statements). You'll need to run the script in the same folder as agenda_log.csv (delete the old data, just leave the headers) and the config.json. 
-
-Step 5. Once you get it working, put the credentials from the twitter app (don't post these online) into the config file and uncomment the relevant tweepy code in the script.
-
-Step 6. Test the script again - it should now tweet to the twitter account. You may need to delete a few lines in the agenda_log so that the script doesn't ignore all the agendas.
-
-Step 7. Create a scheduled task to run the script on your own computer. If your computer is not always on and connected to the internet, you may want to use a cloud service. Keep in mind you'll need an environment (virtual or otherwise) with Python3. I use PythonAnywhere, but you'll need a paid account to scrape Https sites (like Legistar).  
