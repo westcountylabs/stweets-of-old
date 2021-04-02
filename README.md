@@ -15,14 +15,14 @@ Step 4. If you do not have Tweepy (a python library for interacting with Twitter
 
 Step 5. Open config.json:
 	
-	5a. Replace the "precious\_terms" with the regular expressions of your choice. Letter case does not matter (I'm trying to save people from making mistakes and deleting too much). Also, consider including TwitterIDs for your favorite people that you mention in your tweets. 
+  * 5a. Replace the "precious\_terms" with the regular expressions of your choice. Letter case does not matter (I'm trying to save people from making mistakes and deleting too much). Also, consider including TwitterIDs for your favorite people that you mention in your tweets. 
+
+  * 5b. Replace the "precious\_tweets" with the status id of any tweets that you want to save.
 	
-	5b. Replace the "precious\_tweets" with the status id of any tweets that you want to save.
-	
-	5c. Copy and paste your "CONSUMER\_KEY" and "CONSUMER\_SECRET" from your Twitter Developer application information  
+  * 5c. Copy and paste your "CONSUMER\_KEY" and "CONSUMER\_SECRET" from your Twitter Developer application information  
 
 Step 6. Replace the first line "old_tweets.json" with: ``` { "tweets" : [ { ``` 
-and add ```}``` as the last line of the final.
+and add ```}``` as the last line of the file.
 
 Step 7. Test run the python script in a terminal. Open the activation link in the account for tweet deletion. Copy the verification code back into the console. 
 
