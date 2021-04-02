@@ -1,7 +1,9 @@
 # s'Tweets of Old
 
-A python program that you use to looks through city agenda PDFs for developer-defined regular expressions.
-When the bot finds a match, it tweets a match with the date, matching terms, and a link to the file.
+## Created by Steve Trush (steve@westcountylabs.com)
+
+This is a short python script that lets you perform a mass removal of tweets from your Twitter account.
+When a regular expression finds a match in your past Tweets text -or- when a specific Tweet ID matches any status that you want to save, the script will skip over that tweet and not delete it!  
 
 Running this requires you to have a Twitter app registered through the Twitter Developer platform (https://developer.twitter.com/) -or- a temporary key requested from info@westcountylabs.com.
 
