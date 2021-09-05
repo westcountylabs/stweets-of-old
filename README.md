@@ -23,7 +23,7 @@ Step 5. Open config.json:
 	
   * 5c. Copy and paste your "CONSUMER\_KEY" and "CONSUMER\_SECRET" from your Twitter Developer application information  
 
-Step 6. Replace the first line "old_tweets.json" with: ``` { "tweets" : [ { ``` 
+Step 6. Replace the first line "old_tweets.json" with: ``` { "tweets" : [ ``` 
 and add ```}``` as the last line of the file.
 
 Step 7. Test run the python script in a terminal. Open the activation link in the account for tweet deletion. Copy the verification code back into the console. 

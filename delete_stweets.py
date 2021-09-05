@@ -108,7 +108,7 @@ def main():
 
 	old_tweets = [];
 	precious_tweets = config_data["precious_tweets"]
-	with open("old_tweets.json") as tweetfile:
+	with open("old_tweets.json", encoding="utf8") as tweetfile:
 		reader = json.load(tweetfile)
 		for twit in reader["tweets"]:
 			if int(twit['tweet']['id']) not in precious_tweets:

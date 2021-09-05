@@ -1,9 +1,5 @@
 {
 	"precious_terms" : [
-		"Mulligan",
-		"testing",
-		"automat[a-z]*.license.plate.reader",
-		"test[a-z]*",
 		"Secure.*Justice"
 	],
 	"precious_tweets" : [
@@ -13,7 +9,7 @@
 		1375321288395251715
 	],
 	"twitter_creds": {
-		"CONSUMER_KEY" :    "",
-		"CONSUMER_SECRET" : ""
+		"CONSUMER_KEY" :    "XXXXXX",
+		"CONSUMER_SECRET" : "XXXXXX"
 	}
 }
